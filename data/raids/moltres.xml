@@ -1,0 +1,5 @@
+<raid>
+<announce delay="0" type="event" message="Desde tiempos ancestrales se rumora que cuando el cielo se torna rojo,el phoenix sale de caza."/>
+<announce delay="300000" type="event" message="La aldeanos que viven cerca del volcan Reportan fuertes Ruidos en el Volcan"/>
+<singlespawn delay="300000" name="moltres" x="848" y="888" z="6" />
+</raid>

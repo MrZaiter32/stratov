@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Lola" script="furniture.lua" walkinterval="2000" skull="green" floorchange="0">
+	<health now="150" max="150"/>
+	<look type="613" head="114" body="0" legs="95" feet="114" corpse="2212"/>
+	<parameters>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I sell chairs, tables, plants, containers, pillows and more. Everything for 500 gold pieces, just {trade}."/>
+		<parameter key="shop_buyable" value="
+red cushioned chair kit,3901,500;
+green cushioned chair kit,3902,500;
+wooden chair kit,3903,500;
+rocking chair kit,3904,500;
+sofa chair kit,3905,500;
+tusk chair kit,3906,500;
+ivory chair kit,3907,500;
+small table kit,3908,500;
+unknown kit,3909,500;
+christmas tree package,3910,500;
+big table kit,3911,500;
+stone table kit,3912,500;
+tusk table kit,3913,500;
+bamboo table kit,3914,500;
+drawer kit,3915,500;
+dresser kit 2,3916,500;
+locker kit,3917,500;
+trough kit,3918,500;
+barrel kit,3919,500;
+trunk kit,3920,500;
+bamboo drawer kit,3921,500;
+birdcage kit,3922,500;
+globe kit,3923,500;
+table lamp kit,3924,500;
+telescope kit,3925,500;
+rocking horse kit,3926,500;
+pendulum clock kit,3927,500;
+knight statue kit,3928,500;
+minotaur statue kit,3929,500;
+goblin statue kit,3930,500;
+large amphora kit,3931,500;
+coal basin kit,3932,500;
+piano kit,3933,500;
+harp kit,3934,500;
+trunk chair kit,3935,500;
+trunk table kit,3936,500;
+indoor plant kit,3937,500;
+unknown kit,3938,500;
+monkey statue 'see' kit,5086,500;
+monkey statue 'hear' kit,5087,500;
+monkey statue 'speak' kit,5088,500;
+armor rack kit,6114,500;
+weapon rack kit,6115,500;
+oven kit,6372,500;
+bookcase kit,6373,500;
+heavy package,7503,500;
+chimney kit,8692,500;
+white tapestry,1880,500;
+blue tapestry,1872,500;
+red tapestry,1869,500;
+orange tapestry,1866,500;
+green tapestry,1860,500;
+yellow tapestry,1863,500;
+purple tapestry,1857,500;
+cuckoo clock,1877,500;
+christmas wreath,6502,500;
+christmas garland,6503,500;
+red christmas garland,6504,500;
+blue christmas garland,6505,500;
+christmas present,6506,500;
+christmas card,6388,500;
+small purple pillow,1678,500;
+small green pillow,1679,500;
+small red pillow,1680,500;
+small blue pillow,1681,500;
+small orange pillow,1683,500;
+small white pillow,1684,500;
+heart pillow,1685,500;
+blue pillow,1686,500;
+red pillow,1687,500;
+green pillow,1688,500;
+yellow pillow,1689,500;
+round blue pillow,1690,500;
+round red pillow,1691,500;
+round purple pillow,1692,500;
+round turquiose pillow,1693,500;
+oval mirror,1845,750;
+round mirror,1848,750;
+edged mirror,1851,750;
+green bed,7904,1000;
+red bed,7905,1000;
+yellow bed,7906,1000;
+bed removal,7907,1000;
+wooden stake,5941,10000;" />
+	</parameters>
+</npc>

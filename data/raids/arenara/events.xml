@@ -1,0 +1,10 @@
+<raid>
+<announce delay="0" type="event" message="MUHAHAHAHA!"/>
+<areaspawn delay="10" fromx="727" fromy="368" fromz="14" tox="743" toy="386" toz="14">
+	<monster name="Demon fire" amount="2" />
+	<monster name="dragon aevis" amount="1" />
+	<monster name="gorgimera fire" amount="2" />
+	<monster name="hellfire" amount="1" />
+	<monster name="spirit of fire fire" amount="4" />
+</areaspawn>
+</raid>

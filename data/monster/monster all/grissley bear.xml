@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Grissley Bear" nameDescription="a Grissley Bear" race="blood" experience="983" speed="400" manacost="300">
+  <health now="41080" max="41080"/>
+  <look type="16" head="20" body="30" legs="40" feet="50" corpse="5975"/>
+  <targetchange interval="2000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="15"/>
+  </flags>
+  <attacks>
+      <attack name="melee" interval="2000" min="-850" max="-2050"/>
+      <attack name="melee" interval="1000" min="-350" max="-550"/>
+      <attack name="melee" interval="4000" min="-5850" max="-6050"/>
+  </attacks>
+  <voices interval="5000" chance="10">
+    <voice sentence="Grrrr"/>
+    <voice sentence="Groar"/>
+  </voices>
+  <loot>
+    <item id="2671" countmax="55" chance1="33333" chancemax="50"/> -- ham
+    <item id="2666" countmax="45" chance1="33333" chancemax="40"/> -- meat
+    <item id="3976" countmax="35" chance1="50000" chancemax="30"/> -- worm
+    <item id="5902" countmax="100" chance1="50000" chancemax="100"/> -- honeycomb
+  </loot>
+</monster>

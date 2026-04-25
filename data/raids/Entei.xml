@@ -1,0 +1,5 @@
+<raid>
+<announce delay="0" type="event" message="Se dice que con un solo rugido , es capas de hacer que los volcanes hagan erupcion..."/>
+<announce delay="30000" type="event" message="El volcan de anshara reporta altas de movimiento"/>
+<singlespawn delay="30000"  name="groudon" x="1049" y="1163" z="15" />
+</raid>

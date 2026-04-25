@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="RegiRock" nameDescription="a RegiRock" race="undead" experience="0" speed="500">
+  <health now="51200" max="51200"/>
+  <look type="530" corpse="0"/>
+  <targetchange interval="2000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="15"/>
+  </flags>
+  <script>
+<event name="petDeath"/>
+</script> 
+  <attacks>
+    <attack name="melee" interval="2000" skill="120" attack="90"/>
+    <attack name="earth" interval="1000" chance="30" range="7" min="-350" max="-1900">
+      <attribute key="shootEffect" value="largerock"/>
+    </attack>
+<attack name="death" interval="3000" chance="25" range="7" radius="3" target="0" min="-130" max="-355">
+  <attribute key="areaEffect" value="mortarea"/>
+</attack>
+  </attacks>
+  <defenses armor="60" defense="80"/>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="0"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="0"/>
+    <immunity outfit="0"/>
+    <immunity drunk="0"/>
+    <immunity invisible="0"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Grirrr"/>
+  </voices>
+ 
+</monster>

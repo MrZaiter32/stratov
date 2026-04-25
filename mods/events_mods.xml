@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mod name="events mods" version="1.0" author="Mattyx14" contact="marty@otland.net" enabled="yes">
+	<changelog><![CDATA[
+				* [01/06/2012 v1.0] Spell Reward for level
+	]]></changelog>
+
+<!-- Spell Reward for level -->
+	<event type="advance" name="spell-up-event" event="script"><![CDATA[
+		local s = {
+			repeatAfterDeath = true, -- true -> player will always get the msg at lvlup | false -> player will only get the 1st time the gets the new level
+			detailedInfo = true, -- true -> player will get name, words, mana & mana% info of spells | false -> player will only get the name and the words of the spells
+			Storage = 10000, -- storage below is where the newlevel will be stored ONLY IF YOU USE repeatAfterDeath
+			messageType = 'channel', -- options: 'popUp' or 'channel'
+			channelClass = MESSAGE_EVENT_ORANGE -- this one below only used if messageType = channel
+		}
+		function onAdvance(cid, skill, oldlevel, newlevel)
+			if skill ~= SKILL__LEVEL or not s.repeatAfterDeath and getCreatureStorage(cid, s.Storage) >= newlevel then
+				return true 
+			end
+			local t = {}
+			for i = 0, getPlayerInstantSpellCount(cid) - 1 do
+			local spell = getPlayerInstantSpellInfo(cid, i)
+				if(spell.level ~= 0) and spell.level == newlevel then
+					if(spell.manapercent > 0) then
+						spell.mana = spell.manapercent .. '%'
+					end
+					table.insert(t, spell)
+				end
+			end
+			table.sort(t, function(a, b) return a.level < b.level end)
+			local text, prevLevel = '', -1
+			for i, spell in ipairs(t) do
+			local line = ''
+				if(prevLevel ~= spell.level) then
+					if(i ~= 1) then
+						line = '\n'
+					end
+					line = line .. 'You have just advanced to level '..newlevel..' and learned new spells!\n'
+					prevLevel = spell.level
+				end
+				text = text ..line..' ['..spell.name..'] "'..spell.words..'" '..(s.detailedInfo and 'Mana['..spell.mana..']'..(spell.mlevel > 0 and ' ML['..spell.mlevel..']' or '') or '')..'\n'
+			end
+			if text == '' then
+				return true
+			end
+			doCreatureSetStorage(cid, s.Storage, newlevel)
+			if s.messageType == 'popUp' then
+				doShowTextDialog(cid, 2175, text)
+			elseif s.messageType == 'channel' then
+				doPlayerSendTextMessage(cid, s.channelClass, text)
+			end
+			return true
+		end
+	]]></event>
+
+	<event type="login" name="spell-up-login" event="buffer"><![CDATA[
+		registerCreatureEvent(cid, "spell-up-event")
+		_result = true
+	]]></event>
+</mod>

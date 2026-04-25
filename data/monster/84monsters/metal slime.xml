@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Metal Slime" nameDescription="a metal slime" race="undead" experience="120000" speed="250" manacost="0">
+	<health now="13900" max="13900"/>
+	<look type="316" corpse="9964"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="85"/>
+		<flag runonhealth="0"/>
+	</flags>
+	
+	<attacks>
+    		<attack name="drown" interval="1500" min="-2030" max="-3800"/>
+		<attack name="drown" interval="2500" chance="15" range="5" target="1" min="-1500" max="-2290">
+			<attribute key="areaEffect" value="energy"/>
+			<attribute key="shootEffect" value="energy"/>
+		</attack>
+	</attacks>
+	
+	<defenses armor="20" defense="20">
+		<defense name="speed" interval="1000" chance="10" speedchange="250" duration="8000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>
+		<defense name="healing" interval="1000" chance="14" min="0" max="0">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+  <immunities>
+    <immunity invisible="1"/>
+    <immunity paralyze="1"/>
+  </immunities>
+	<elements>
+		<element firePercent="95"/>
+		<element earthPercent="99"/>
+		<element icePercent="99"/>
+		<element physicalPercent="99"/>
+		<element holyPercent="99"/>
+		<element deathPercent="99"/>
+		<element energyPercent="99"/>
+	</elements>
+	
+	<voices interval="5000" chance="10">
+		<voice sentence="Crackle"/>
+	</voices>
+	
+	<loot>
+		<item id="2152" countmax="100" chance1="100000" chancemax="0"/> -- platinum coin
+		<item id="2152" countmax="95" chance1="100000" chancemax="0"/> -- platinum coin
+		<item id="2152" countmax="85" chance1="100000" chancemax="0"/> -- platinum coin
+		<item id="2152" countmax="75" chance1="100000" chancemax="0"/> -- platinum coin
+		<item id="2152" countmax="65" chance1="100000" chancemax="0"/> -- platinum coin
+		<item id="2152" countmax="55" chance1="100000" chancemax="0"/> -- platinum coin
+		<item id="15920" chance="500"/> -- magic metal armor :: Arm 10
+		<item id="16014" chance="88500"/> -- tiara of misidia :: Arm 16
+	</loot>
+</monster>

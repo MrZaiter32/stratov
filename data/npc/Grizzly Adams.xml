@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Grizzly Adams" script="data/npc/scripts/killinginthenameof.lua" walkinterval="2000" floorchange="0" access="3" level="500" maglevel="1">
+   <health now="800" max="800"/>
+   <look type="144" head="97" body="97" legs="94" feet="97" addons="3" corpse="2212"/>
+   <parameters>
+      <parameter key="message_greet" value="I can help you gaining experience and money if you complete this {tasks}." />
+      <parameter key="message_decline" value="Hakuna matata!!!"/> 
+   </parameters>
+</npc>

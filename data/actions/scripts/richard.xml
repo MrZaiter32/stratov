@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Richard" script="simple_task.lua" walkinterval="0" floorchange="0">
+	<look typeex="9242"/>
+ <parameters>
+  <parameter key="message_greet" value="Hi, welcome to Cronus World. This will be your very first {mission} you make."/>
+    </parameters>
+</npc>

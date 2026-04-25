@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Via Libre" script="bootmaker.lua" walkinterval="0" skull="green" floorchange="0">
+	<health now="150" max="150"/>
+	<look type="129" head="114" body="119" legs="114" feet="114" corpse="2212" addons="3"/>
+    <parameters>
+        
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. Quieres renovar tus Sofh Boots o fire walaker , di {soft}."/>
+		<parameter key="message_farewell" value="Cya Later." />
+			
+    </parameters>
+</npc>

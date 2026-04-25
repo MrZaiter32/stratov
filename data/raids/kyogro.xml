@@ -1,0 +1,5 @@
+<raid>
+<announce delay="0" type="event" message="Test kyogro" />
+<announce delay="2000" type="event" message="Test 2" />
+<singlespawn delay="2000" name="kyogro" x="1097" y="1002" z="8" /> [X: 1097] [Y: 1002] [Z: 8].
+</raid>

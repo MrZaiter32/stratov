@@ -1,0 +1,5 @@
+<raid>
+<announce delay="0"  type="event" message="Test Ho oH" />
+<announce delay="2000" type="event" message="Test 2" />
+<singlespawn delay="2000" name="Ho oH" x="1533" y="926" z="15" /> X: 1533] [Y: 926] [Z: 15].
+</raid>

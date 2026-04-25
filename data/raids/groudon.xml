@@ -1,0 +1,5 @@
+<raid>
+<announce delay="0" type="event"  message="Alguna vez , los continentes sobre los que estamos paradosestaban sumergidos en agua , pero el tuvo la fuerza de sacarlos a flote. GROUUUUUUUUUUU !!"/>
+<announce delay="300000" type="event" message="ans Esta Temblando"/>
+<singlespawn delay="300000" name="Groudon" x="659" y="390" z="8" />
+</raid>

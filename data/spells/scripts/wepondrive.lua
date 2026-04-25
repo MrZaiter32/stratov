@@ -1,0 +1,111 @@
+local BlockedMonsters = { 
+        "Deathslicer", 
+        "Flamethrower", 
+        "Magicthrower", 
+        "Plaguethrower", 
+        "Poisonthrower", 
+        "Shredderthrower"
+} 
+local MaximumHits = 20
+local AllowSameTeam = false
+local AllowSameGuild = false
+local AllowPlayers = true
+local useDirection = false
+
+local finishercombat = createCombatObject() 
+setCombatParam(finishercombat, COMBAT_PARAM_TYPE, COMBAT_PHYSICALDAMAGE) 
+setCombatParam(finishercombat, COMBAT_PARAM_EFFECT, CONST_ME_GROUNDSHAKER) 
+setCombatParam(finishercombat, COMBAT_PARAM_USECHARGES, true) 
+setCombatFormula(finishercombat, COMBAT_FORMULA_SKILL, 1, -50, 1, -0) 
+setCombatArea(finishercombat, createCombatArea(AREA_CIRCLE3X3)) 
+local combat1 = createCombatObject() 
+setCombatParam(combat1, COMBAT_PARAM_TYPE, COMBAT_PHYSICALDAMAGE) 
+setCombatParam(combat1, COMBAT_PARAM_EFFECT, CONST_ME_GROUNDSHAKER) 
+setCombatParam(combat1, COMBAT_PARAM_USECHARGES, true) 
+setCombatFormula(combat1, COMBAT_FORMULA_SKILL, 1, -50, 1, -0) 
+local combat = createCombatObject() 
+setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_PHYSICALDAMAGE) 
+setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_GROUNDSHAKER) 
+setCombatParam(combat, COMBAT_PARAM_USECHARGES, true) 
+setCombatFormula(combat, COMBAT_FORMULA_SKILL, 1.0, -0, 1.0, -0) 
+
+function Drive(cid,var,times,target,oDir,opos) 
+    if (not isCreature(target) and isCreature(cid)) or not isCreature(cid) then 
+        doCreatureSetNoMove(target, false) 
+        doCreatureSetNoMove(cid, false) 
+        return doCombat(cid,finishercombat,var) 
+    end
+    local TargetPos = 0
+    local PlayerDirection = 0
+    local nextPos = 0
+    if oDir == 99 then
+        TargetPos = getCreaturePosition(target) 
+        PlayerDirection = getCreatureLookDirection(cid) 
+        nextPos = getPosByDir(TargetPos,PlayerDirection)
+      else
+        TargetPos = getCreaturePosition(target) 
+        PlayerDirection = oDir
+        nextPos = getPosByDir(TargetPos,PlayerDirection)
+      end
+    if not isWalkable(cid,nextPos) then 
+        doCreatureSetNoMove(target, false) 
+        doCreatureSetNoMove(cid, false) 
+        return doCombat(cid,combat1,var) 
+    end
+    local PlayerPos = getCreaturePosition(cid)
+    doTeleportThing(target,nextPos) 
+    doTeleportThing(cid,opos)
+    doCombat(cid,combat,var) 
+    doSendDistanceShoot(PlayerPos, TargetPos, getWeaponDistanceEffect(getPlayerWeapon(cid).uid))
+    if getCreatureHealth(target) <= 1 or not isCreature(target) then 
+        doTeleportThing(cid,nextPos)
+        if isCreature(target) then
+            doCreatureSetNoMove(target, false) 
+        end
+        doCreatureSetNoMove(cid, false) 
+        return doCombat(cid,finishercombat,var) 
+    end 
+    if times == MaximumHits then 
+        doCreatureSetNoMove(target, false) 
+        doCreatureSetNoMove(cid, false) 
+        return doCombat(cid,finishercombat,var) 
+    else 
+        return addEvent(Drive,100,cid,var,times+1,target,oDir,TargetPos) 
+    end 
+end 
+
+function onCastSpell(cid, var)
+        local Target = getCreatureTarget(cid)
+        if isInArray(BlockedMonsters,getCreatureName(Target)) then
+            doPlayerSendCancel(cid, "You cannot use this spell on that monster!")
+            doSendMagicEffect(getCreaturePosition(cid), CONST_ME_POFF)
+            return false
+        elseif not AllowPlayers and isPlayer(Target) then
+            doPlayerSendCancel(cid, "You cannot use this spell on players!")
+            doSendMagicEffect(getCreaturePosition(cid), CONST_ME_POFF)
+            return false
+        elseif AllowSameTeam and isPlayer(Target) and isInParty(cid) and isInParty(Target) then
+            local PlayerParty = getPlayerParty(cid)
+            local TargetParty = getPlayerParty(Target)
+            if PlayerParty == TargetParty then
+                    doPlayerSendCancel(cid, "You cannot use this spell on a party member!")
+                    doSendMagicEffect(getCreaturePosition(cid), CONST_ME_POFF)
+                    return false
+            end
+        elseif AllowSameGuild and isPlayer(Target) and getPlayerGuildId(cid) > 0 and getPlayerGuildId(Target) > 0 then
+            local PlayerGuild = getPlayerGuildId(cid)
+            local TargetGuild = getPlayerGuildId(Target)
+            if PlayerGuild == TargetGuild then
+                    doPlayerSendCancel(cid, "You cannot use this spell on your guildmate!")
+                    doSendMagicEffect(getCreaturePosition(cid), CONST_ME_POFF)
+                    return false
+            end
+    end
+        doCreatureSetNoMove(Target, true) 
+        doCreatureSetNoMove(cid, true)
+        if useDirection then
+            return addEvent(Drive,1,cid,var,1,Target,99,getCreaturePosition(Target))
+        else
+            return addEvent(Drive,1,cid,var,1,Target,getCreatureLookDirection(cid),getCreaturePosition(Target))
+        end
+end

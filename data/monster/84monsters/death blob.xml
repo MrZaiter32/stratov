@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Death Blob" nameDescription="a death blob" race="undead" experience="2700" speed="230" manacost="0">
+	<health now="2120" max="2120"/>
+	<look type="315" corpse="9960"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="85"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+    		<attack name="melee" interval="2000" min="-40" max="-250"/>
+    <attack name="death" interval="1000" chance="20" radius="1" target="1" min="-50" max="-90">
+      <attribute key="areaEffect" value="SMALLCLOUDS"/>
+    </attack>
+	</attacks>
+	<defenses armor="10" defense="10"/>
+<elements>
+<element firePercent="25"/>
+<element icePercent="25"/>
+<element physicalPercent="50"/>
+<element earthPercent="25"/>
+<element energyPercent="25"/>
+<element holyPercent="25"/>
+<element deathPercent="100"/>
+</elements>
+  <immunities>
+    <immunity invisible="1"/>
+  </immunities>
+	<loot>
+		<item id="2152" countmax="12" chance1="100000" chancemax="0"/> -- platinum coin
+		<item id="9968" countmax="1" chance="18000" chancemax="0"/> -- glob of tar
+	</loot>
+</monster>

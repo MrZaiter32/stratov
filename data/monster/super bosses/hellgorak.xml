@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Hellgorak" nameDescription="a Hellgorak" race="undead" experience="1035000" speed="370" manacost="0">
+  <health now="780200" max="780200"/>
+<look type="12" head="0" body="0" legs="94" feet="94" corpse="6068"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="2500"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="350" attack="380"/>
+    <attack name="manadrain" interval="1000" chance="15" range="7" min="-800" max="-900"/>
+    <attack name="manadrain" interval="1000" chance="15" radius="5" target="0" min="-700" max="-900">
+      <attribute key="areaEffect" value="BIGCLOUDS"/>
+    </attack>
+    <attack name="fire" interval="1500" chance="6" radius="5" target="0">
+      <attribute key="areaEffect" value="GROUNDSHAKER"/>
+    </attack>
+    <attack name="fire" interval="1000" chance="45" range="7" radius="5" target="1" min="-710" max="-2950">
+      <attribute key="shootEffect" value="fire"/>
+      <attribute key="areaEffect" value="EXPLOSIONAREA"/>
+    </attack>
+    <attack name="firefield" interval="1900" chance="10" range="7" radius="4" target="1">
+      <attribute key="shootEffect" value="fire"/>
+    </attack>
+    <attack name="death" interval="1000" chance="28" length="8" spread="2" min="-1000" max="-1650">
+      <attribute key="areaEffect" value="GROUNDSHAKER"/>
+    </attack>
+  </attacks>
+  <defenses armor="40" defense="45">
+    <defense name="healing" interval="500" chance="25" min="800" max="1500">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="healing" interval="3600" chance="50" min="1000" max="1250">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="speed" interval="1000" chance="70" speedchange="1130" duration="7000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+<elements>
+<element firePercent="100"/>
+<element icePercent="100"/>
+<element earthPercent="100"/>
+<element energyPercent="100"/>
+<element holyPercent="30"/>
+<element deathPercent="30"/>
+<element physicalPercent="50"/>
+</elements>
+  <summons maxSummons="4">
+    <summon name="demon" interval="1000" chance="50"/>
+  </summons>
+  <voices interval="5000" chance="10">
+    <voice sentence="PRAISED BE MY MASTERS, THE RUTHLESS SEVEN!" yell="1"/>
+    <voice sentence="YOU ARE DOOMED!" yell="1"/>
+    <voice sentence="Hellgorak IS BACK!" yell="1"/>
+    <voice sentence="Be prepared for the day my masters will come for you!"/>
+    <voice sentence="SOULS FOR INFERNUS!" yell="1"/>
+  </voices>
+<loot>
+<item id="2160" chance="100000" countmax="12" /> -- crystal coin
+<item id="2514" chance="18000" /> -- mastermind shield :: Def 38
+<item id="6300" chance="12000" /> -- death ring
+<item id="5943" chance="27000" /> -- Morgaroth's heart
+<item id="2495" chance="27000" /> -- demon legs :: Arm 14
+<item id="16078" chance="27000" /> -- Lord's Robe :: Arm 11
+<item id="2003" chance="100000" > -- grey backpack
+<inside>
+	<item id="7431" chance="6000" /> -- demonbone :: Def 38 :: Atk 48
+	<item id="2393" chance="60000" /> -- giant sword :: Def 22 :: Atk 54
+	<item id="2195" chance="14033" /> -- boots of haste
+	<item id="8856" chance="14033" /> -- yol's bow :: Atk 10 16104
+	<item id="16090" chance="74033" />
+    <item id="16104" chance="6000" />	-- pural might ring
+</inside>
+</item>
+</loot>
+</monster>

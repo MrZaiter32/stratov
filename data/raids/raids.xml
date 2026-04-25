@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raids>
+
+	<raid name="Ghazbaran" 	file="Ghazbaran.xml" 		interval2="150" margin="1800" enabled="yes"/>
+	<raid name="Morgaroth" 	file="Morgaroth.xml" 		interval2="150" margin="1800" enabled="yes"/>
+	<raid name="Orshabaal" 	file="Orshabaal.xml" 		interval2="150" margin="1800" enabled="yes"/>
+	<raid name="Ferumbras" 	file="Ferumbras.xml" 		interval2="150" margin="1800" enabled="yes"/>
+	<raid name="FerumbrasX" file="FerumbrasX.xml" 		interval2="150" margin="1800" enabled="yes"/>
+	<raid name="verminor" 	file="verminor.xml" 		interval2="150" margin="1800" enabled="yes"/>
+	<raid name="azerus" 	file="azerus.xml" 			interval2="150" margin="1800" enabled="yes"/>
+	<raid name="infernus" 	file="infernus.xml" 		interval2="150" margin="1800" enabled="yes"/>
+	<raid name="Lucifer" 	file="Lucifer.xml" 			interval2="150" margin="1800" enabled="yes"/>
+	<raid name="ra" 		file="arenara/ra.xml" 		interval2="150" margin="1800" enabled="yes"/>
+	<raid name="events" 	file="arenara/events.xml" 	interval2="150" margin="1800" enabled="yes"/>
+
+	<raid name="apes" 		file="ApeRaid.xml" 			interval2="150" margin="1800" enabled="yes"/>
+	<raid name="scarabs" 	file="scarabs.xml" 			interval2="150" margin="1800" enabled="yes"/>
+	<raid name="quaras" 	file="QuaraRaid.xml" 		interval2="150" margin="1800" enabled="yes"/>
+	<raid name="pirates" 	file="PirateRaid.xml" 		interval2="150" margin="1800" enabled="yes"/>
+	<!--<raid name="zapdos" 	file="zapdos.xml" 			interval2="150" margin="1800" enabled="yes"/> -->
+	<raid name="groudon" 	file="groudon.xml" 			interval2="150" margin="1800" enabled="yes"/>
+	<raid name="orcs" 		file="OrcRaid.xml" 			interval2="150" margin="1800" enabled="yes"/>
+	<raid name="elfs" 		file="ElvesRaid.xml" 		interval2="150" margin="1800" enabled="yes"/>
+	<raid name="cyclops" 	file="cyclopsRaid.xml" 		interval2="150" margin="1800" enabled="yes"/>
+	<raid name="hero" 		file="HeroRaid.xml" 		interval2="150" margin="1800" enabled="yes"/>
+	
+
+</raids>

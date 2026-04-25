@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Martin" script="data/npc/scripts/dragon quest.lua" access="3" lookdir="2" walkinterval="2000">
+ <health now="150" max="150"/> 
+<look type="57" head="115" body="113" legs="31" feet="38" addons="3" corpse="2212"/>
+ <parameters>
+  <parameter key="message_greet" value="Hi, can you help me? ask me for a {mission}. "/>
+    </parameters>
+</npc>

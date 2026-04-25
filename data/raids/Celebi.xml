@@ -1,0 +1,5 @@
+<raid>
+<announce delay="0" type="event" type="event" message="Cuenta la historia que es capas de controlar el tiempo y su aparicion solo indica la vispera de buenos tiempos..." />
+<announce delay="2000"  type="event" message="Deromin a estado de fiesta ,se rumora que an visto a celebi" />
+<singlespawn delay="2000"  name="Celebi" x="575" y="1143" z="7" />
+</raid>

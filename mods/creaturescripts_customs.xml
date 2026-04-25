@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mod name="Custom Events" version="1.0" author="MartyX" contact="https://mapacheot.com" enabled="yes">
+	<event type="login" name="Powergammers" event="script" value="creature/powergamers.lua"/>
+	<!-- <event type="login" name="FirstItemsVocs" event="script" value="creature/firstitemsvoc.lua"/> -->
+	<event type="kill" name="UpgradeWeapon" event="script" value="creature/monster_weapon_upgrade.lua"/>
+</mod>

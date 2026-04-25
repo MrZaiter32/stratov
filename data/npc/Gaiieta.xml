@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Gaiieta" script="data/npc/scripts/comerciante.lua" walkinterval="1" floorchange="0" access="0" level="500" maglevel="1">
+   <health now="150" max="150"/>
+   <look type="503" head="58" body="120" legs="79" feet="113" corpse="2212"/>
+   <parameters>
+      <parameter key="message_greet" value="Que pedo! |PLAYERNAME| di Marriage!!" />
+      <parameter key="message_decline" value="Jah Bless!!!"/> 
+   </parameters>
+</npc>

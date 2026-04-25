@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Undead Gladiator" nameDescription="a undead gladiator" race="undead" experience="3800" speed="270" manacost="0">
+	<health now="3000" max="3000"/>
+	<look type="306" corpse="9823"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-80" max="-350"/>
+		<attack name="physical" interval="1000" chance="14" range="7" min="-0" max="-135">
+			<attribute key="shootEffect" value="whirlwindsword"/>
+		</attack>		
+	</attacks>
+	<defenses armor="40" defense="45">
+		<defense name="invisible" interval="5000" chance="50" duration="5000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element earthPercent="-5"/>
+		<element holyPercent="10"/>
+		<element firePercent="80"/>
+		<element energyPercent="20"/>
+		<element deathPercent="-5"/>
+	</elements>
+	<immunities>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2500" chance="10">
+		<voice sentence="Let's battle it out in a duel!"/>
+		<voice sentence="Bring it!"/>
+		<voice sentence="I'll fight here in eternity and beyond."/>
+		<voice sentence="I will not give up!"/>
+		<voice sentence="Another foolish adventurer who tries to beat me."/>	
+	</voices>
+	<loot>
+		<item id="2148" countmax="75" chance1="100000" chancemax="0"/>  -- gold coin
+		<item id="2148" countmax="75" chance1="100000" chancemax="0"/>  -- gold coin
+		<item id="2399" countmax="17" chance1="4000"/>  -- throwing star :: Atk 36
+		<item id="2647" chance="3500"/>  -- plate legs :: Arm 7
+		<item id="2465" chance="4000"/>  -- brass armor :: Arm 8
+		<item id="2666" countmax="2" chance1="10000"/>  -- meat
+		<item id="8872" chance="1500"/>  -- belted cape :: Arm 10
+		<item id="2497" chance="800"/>  -- crusader helmet :: Arm 8
+		<item id="1987" chance="100000">  -- bag
+			<inside>
+				<item id="3965" chance="4000"/>  -- hunting spear :: Atk 38
+				<item id="2419" chance="4000"/>  -- scimitar :: Def 13 :: Atk 19
+				<item id="2478" chance="3000"/>  -- brass legs :: Arm 5
+				<item id="2463" chance="2500"/>  -- plate armor :: Arm 10
+				<item id="2200" chance="3000"/>  -- protection amulet
+				<item id="2377" chance="2500"/>  -- two handed sword :: Def 25 :: Atk 30
+				<item id="2165" chance="1300"/>  -- stealth ring
+				<item id="2490" chance="1600"/>  -- dark helmet :: Arm 6
+				<item id="2430" chance="900"/>  -- knight axe :: Def 21 :: Atk 38
+				<item id="3962" chance="500"/>  -- beastslayer axe :: Def 12 :: Atk 35
+				<item id="5885" chance="400"/>  -- warrior's sweat
+				<item id="7454" chance="300"/>  -- glorious axe :: Def 23 :: Atk 59
+				<item id="7389" chance="200"/>  -- heroic axe :: Def 24 :: Atk 44
+			</inside>
+		</item>
+	</loot>
+</monster>

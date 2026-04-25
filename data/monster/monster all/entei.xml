@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Enteeii" nameDescription="a Entei" race="undead" experience="2000000" speed="996" manacost="600">
+
+  <health now="4002" max="4002"/>
+  <look type="527" corpse="0"/>
+  <targetchange interval="2000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="1"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="700" min="-450" max="-1500"/>
+    <attack name="manadrain" interval="700" chance="13" range="7" min="-180" max="-410"/>
+    <attack name="fire" interval="600" chance="14" range="7" radius="7" target="1" min="-160" max="-550">
+      <attribute key="shootEffect" value="fire"/>
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+    <attack name="fire" interval="800" chance="14" range="7" radius="7" target="1" min="-160" max="-550">
+      <attribute key="shootEffect" value="fire"/>
+      <attribute key="areaEffect" value="fireattack"/>
+    </attack>
+    <attack name="firefield" interval="1000" chance="15" range="7" radius="10" target="10">
+      <attribute key="shootEffect" value="fire"/>
+    </attack>
+    <attack name="fire" interval="600" chance="30" length="8" spread="0" min="-120" max="-580">
+      <attribute key="areaEffect" value="firearea"/>
+    </attack>
+  </attacks>
+  <defenses armor="50" defense="55">
+    <defense name="healing" interval="1000" chance="15" min="90" max="150">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="0"/>
+    <immunity fire="1"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+    <immunity poison="0"/>
+  </immunities>
+  <elements>
+	<element physicalPercent="50"/>
+	<element earthpercent="50"/>
+	<element energyPercent="100"/>
+	<element deathPercent="50"/>
+	<element icePercent="50"/>
+	<element holyPercent="50"/>
+  </elements>
+  <summons maxSummons="0">
+    <summon name="fire elemental" interval="2500" chance="10" max="0"/>
+  </summons>
+  <voices interval="5000" chance="10">
+    <voice sentence="Grrr!" yell="1"/>
+  </voices>
+</monster>
+

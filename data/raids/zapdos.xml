@@ -1,0 +1,5 @@
+<raid>
+<announce delay="0" type="event" message="Hay una leyenda de las tribus nativas, las tormentas la provocaba el mítico pájaro... zaaaaaap!!!!"/>
+<announce delay="20000" type="event"  message="Y una Tormenta Poderosa esta Suscitandose en Varkhal"/>
+<singlespawn delay="20000" name="zapdos" x="1469" y="910" z="6"/>
+</raid>

@@ -1,0 +1,18 @@
+<raid>
+<announce delay="1000" type="event" message="Metal creatures activity on VarkHal" />
+
+  <!--Area Spawns-->
+  <areaspawn delay="1000" fromx="1466" fromy="736" fromz="8" tox="1472" toy="756" toz="8">
+      <monster name="mercury blob" amount="10" />
+      <monster name="metal slime" amount="1" />
+  </areaspawn>
+  <areaspawn delay="1000" fromx="1466" fromy="758" fromz="9" tox="1498" toy="765" toz="9">
+      <monster name="mercury blob" amount="10" />
+      <monster name="metal slime" amount="1" />
+  </areaspawn>
+  <areaspawn delay="1000" fromx="1500" fromy="757" fromz="10" tox="1508" toy="766" toz="10">
+      <monster name="mercury blob" amount="10" />
+      <monster name="metal slime" amount="1" />
+  </areaspawn>
+
+</raid>

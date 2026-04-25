@@ -1,0 +1,5 @@
+<raid>
+<announce delay="0" type="event"  message="Cuando el sol obscurece y el cielo se pinta con los siete colores de sus alas,todo es paz entre pokemons y humanos" />
+<announce delay="2000" type="event"  message="Hoo..!" />
+<singlespawn delay="2000" name="Ho oH" x="1533" y="926" z="15" />
+</raid>

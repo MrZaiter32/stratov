@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Ferumbras" nameDescription="Ferumbras" race="VENOM" experience="35000" speed="320" manacost="0">
+  <health now="45000" max="45000"/>
+  <look type="229" head="20" body="30" legs="40" feet="50" corpse="6078"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="2500"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="105" attack="155"/>
+    <attack name="manadrain" interval="3000" chance="10" range="7" target="1" min="-350" max="-700">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+    <attack name="earth" interval="1000" chance="6" radius="7" target="0" min="-600" max="-900">
+      <attribute key="areaEffect" value="poison"/>
+    </attack>
+    <attack name="energy" interval="1000" chance="8" radius="7" target="0" min="-340" max="-750">
+      <attribute key="areaEffect" value="energy"/>
+    </attack>
+    <attack name="manadrain" interval="1000" chance="60" range="8" radius="9" min="-3000" max="-5000">
+      <attribute key="areaEffect" value="POFF"/>
+    </attack>
+    <attack name="death" interval="1000" chance="7" radius="8" target="0" min="-405" max="-850">
+      <attribute key="areaEffect" value="poff"/>
+    </attack>
+    <attack name="lifedrain" interval="1000" chance="10" length="6" spread="0" min="-250" max="-600">
+      <attribute key="areaEffect" value="greenspark"/>
+    </attack>
+  </attacks>
+  <defenses armor="30" defense="30">
+    <defense name="healing" interval="1000" chance="20" min="600" max="900">
+      <attribute key="areaEffect" value="greenshimmer"/>
+    </defense>
+    <defense name="speed" interval="1000" chance="4" speedchange="360" duration="7000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="invisible" interval="1000" chance="3" duration="4000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+	<elements>
+		<element firePercent="100"/>
+		<element earthPercent="68"/>
+		<element icePercent="68"/>
+		<element physicalPercent="68"/>
+		<element holyPercent="68"/>
+		<element deathPercent="68"/>
+		<element energyPercent="100"/>
+	</elements>
+  	<summons maxSummons="5">
+		<summon name="demon" interval="1000" chance="100"/>
+		<summon name="demon" interval="3000" chance="100"/>
+		<summon name="demon" interval="3000" chance="100"/>
+		<summon name="demon" interval="3000" chance="100"/>
+		<summon name="demon" interval="3000" chance="100"/>
+	</summons>
+  <voices interval="5000" chance="10">
+    <voice sentence="NOONE WILL STOP ME THIS TIME!" yell="1"/>
+    <voice sentence="THE POWER IS MINE!" yell="1"/>
+    <voice sentence="I returned from death and you dream about defeating me?" yell="1"/>
+  </voices>
+<loot>
+ 	<item id="2160" countmax="25" chance1="100000" chancemax="0"/> -- crystal coin
+ 	<item id="9971" countmax="15" chance1="100000" chancemax="0"/> -- gold ingot
+ 	<item id="2393" chance="4060"/> -- giant sword :: Def 22 :: Atk 54
+ 	<item id="2514" chance="2550"/> -- mastermind shield :: Def 38
+ 	<item id="2408" chance="16000"/> -- sword of legend :: Def 30 :: Atk 66
+ 	<item id="2472" chance="32400"/> -- magic plate armor :: Arm 19
+	<item id="5903" chance="100000"/> -- ferumbras hat :: Arm 1
+ 	<item id="1987" chance="100000"> -- bag
+ 	<inside>
+  	<item id="2678" countmax="3" chance1="10000" chancemax="0"/> -- coconut
+ 	<item id="2148" countmax="100" chance1="100000" chancemax="0"/> -- gold coin
+ 	<item id="2151" countmax="4" chance1="4000" chancemax="0"/> -- talon
+ 	<item id="2462" chance="3400"/> -- devil helmet :: Arm 7
+	<item id="2149" countmax="3" chance1="1428" chancemax="0"/> -- small emerald
+ 	<item id="2171" chance="2200"/> -- platinum amulet :: Arm 2
+ 	<item id="2387" chance="0"/> -- double axe :: Def 12 :: Atk 35
+	<item id="7423" chance="100000"/> -- skullcrusher :: Def 31 :: Atk 62
+	<item id="8918" chance="100000"/> -- spellbook of dark mysteries :: Def 25
+ 	</inside>
+ 	</item>
+</loot>
+</monster>

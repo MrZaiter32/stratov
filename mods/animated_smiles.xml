@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mod name="Animated Smiles" version="1.0" author="DarkKonia" contact="darkylive@live.com.mx" enabled="yes">
+	<!-- If you want add more - just copy line, and change "words" to your smile ;) -->
+	<talkaction words="xD" script="talkactions/animated_smiles.lua" log="no" case-sensitive="no"/>
+	<talkaction words=":d" script="talkactions/animated_smiles.lua" log="no" case-sensitive="no"/>
+	<talkaction words="=d" script="talkactions/animated_smiles.lua" log="no" case-sensitive="no"/>
+	<talkaction words="=p" script="talkactions/animated_smiles.lua" log="no" case-sensitive="no"/>
+	<talkaction words=":p" script="talkactions/animated_smiles.lua" log="no" case-sensitive="no"/>
+	<talkaction words=":o" script="talkactions/animated_smiles.lua" log="no" case-sensitive="no"/>
+	<talkaction words=":s" script="talkactions/animated_smiles.lua" log="no" case-sensitive="no"/>
+	<talkaction words=":/" script="talkactions/animated_smiles.lua" log="no"/>
+
+	
+	
+	<talkaction words=":>" script="talkactions/animated_smiles.lua" log="no"/>
+	<talkaction words=":)" script="talkactions/animated_smiles.lua" log="no"/>
+	<talkaction words=":(" script="talkactions/animated_smiles.lua" log="no"/>
+	
+	<talkaction words=":[" script="talkactions/animated_smiles.lua" log="no"/>
+	<talkaction words=":]" script="talkactions/animated_smiles.lua" log="no"/>
+	<talkaction words=":@" script="talkactions/animated_smiles.lua" log="no"/>
+	<talkaction words="^^" script="talkactions/animated_smiles.lua" log="no"/>
+	<talkaction words="^.^" script="talkactions/animated_smiles.lua" log="no"/>
+	<talkaction words="-.-" script="talkactions/animated_smiles.lua" log="no"/>
+</mod>

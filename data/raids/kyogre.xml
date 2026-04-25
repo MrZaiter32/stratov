@@ -1,0 +1,5 @@
+<raid>
+<announce delay="0" type="event" message="Cuando los mares no estan en calma y la marea sube de poco en poco, se puede apreciar su brillante espalda rompiendo las olas...KYOOOGRE!!!" />
+<announce delay="2000" type="event" message="" />
+<singlespawn delay="2000" name="Kyogre" x="576" y="1143" z="7" />
+</raid>

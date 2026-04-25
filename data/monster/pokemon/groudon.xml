@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Groudon" nameDescription="a Groudon" race="undead" experience="400000" speed="2000">
+  <health now="700000" max="700000"/>
+  <look type="517" corpse="5995"/>
+  <targetchange interval="2000" chance="0"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="1"/>
+    <flag convinceable="1"/>
+    <flag pushable="1"/>
+    <flag canpushitems="0"/>
+    <flag canpushcreatures="0"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="15"/>
+  </flags>
+  
+  <attacks>
+    <attack name="melee" interval="2000" min="-100" max="-5005"/>
+    <attack name="firefield" interval="1000" chance="15" range="7" radius="4" target="1">
+      <attribute key="shootEffect" value="EXPLOSION"/>
+      <attribute key="areaEffect" value="FIREATTACK"/>
+    </attack>
+    <attack name="fire" interval="1200" chance="20" range="7" radius="4" target="1" min="-11180" max="-30395">
+      <attribute key="shootEffect" value="EXPLOSION"/>
+      <attribute key="areaEffect" value="FIREATTACK"/>
+    </attack>
+    <attack name="fire" interval="1000" chance="20" range="7" radius="5" min="-11000" max="-30615">
+      <attribute key="shootEffect" value="EXPLOSION"/>
+      <attribute key="areaEffect" value="FIREATTACK"/>
+    </attack>
+    <attack name="fire" interval="1500" chance="20" range="7" radius="5" min="-21500" max="-30615">
+      <attribute key="shootEffect" value="EXPLOSION"/>
+      <attribute key="areaEffect" value="FIREATTACK"/>
+    </attack>
+
+    <attack name="fire" interval="1000" chance="20" range="7" radius="7" target="1" min="-1500" max="-26925">
+      <attribute key="shootEffect" value="EXPLOSION"/>
+      <attribute key="areaEffect" value="FIREATTACK"/>
+    </attack>
+    <attack name="fire" interval="2100" chance="20" range="7" radius="4" target="1" min="-11200" max="-36090">
+      <attribute key="shootEffect" value="EXPLOSION"/>
+      <attribute key="areaEffect" value="STONES"/>
+    </attack>
+    <attack name="fire" interval="1700" chance="20" range="7" radius="5" min="-11500" max="-30515">
+      <attribute key="shootEffect" value="EXPLOSION"/>
+      <attribute key="areaEffect" value="FIREATTACK"/>
+    </attack>
+    <attack name="fire" interval="2200" chance="20" range="7" radius="5" min="-11050" max="-35015">
+      <attribute key="shootEffect" value="EXPLOSION"/>
+      <attribute key="areaEffect" value="FIREATTACK"/>
+    </attack>
+  </attacks>
+  <defenses armor="6" defense="8"/>
+  <immunities>
+    <immunity physical="1"/>
+    <immunity energy="1"/>
+    <immunity fire="1"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="Grirrr"/>
+  </voices>
+  <loot>
+   <item id="2160" countmax="100" chance="100000" chancemax="0"/> -- crystal coin
+   <item id="2239" chance="20000"/> -- burnt scroll
+   <item id="2187" chance="1111" /> -- wand of inferno
+   <item id="7439" chance="41110" /> -- berserk potion
+   <item id="1987" chance="100000"> -- bag
+         <inside>
+            <item id="16035" chance="44000"/> -- x2boots of haste :: Arm 4
+            <item id="2145" countmax="1" chance1="15000" chancemax="0"/> -- small diamond
+            <item id="2376" chance="12500"/> -- sword :: Def 12 :: Atk 14
+         </inside>
+      </item>
+   </loot>
+</monster>

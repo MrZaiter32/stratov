@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Glooth Bandit" nameDescription="a glooth bandit" race="blood" experience="2000" speed="280" manacost="0">
+	<health now="2600" max="2600"/>
+	<look type="129" head="115" body="80" legs="114" feet="114" addons="0" mount="0" corpse="6080"/>
+	<targetchange interval="2000" chance="2"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="90" attack="60"/>
+		<attack name="physical" interval="2000" chance="20" range="7" min="-0" max="-200">
+			<attribute key="shootEffect" value="arrow"/>
+		</attack>
+	</attacks>
+	<defenses armor="23" defense="31">
+	<defense name="healing" interval="2000" chance="10" min="200" max="250">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element firePercent="-5"/>
+		<element icePercent="10"/>
+		<element energyPercent="20"/>
+		<element deathPercent="20"/>
+		<element physicalPercent="15"/>
+	</elements>
+	<immunities>
+		<immunity poison="1"/>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<loot>
+		<item name="beastslayer axe" chance="800"/><!-- beastslayer axe -->
+		<item name="glooth amulet" chance="990"/><!-- glooth amulet -->
+		<item name="glooth axe" chance="1030"/><!-- glooth axe -->
+		<!-- <item id="23574" countmax="1" chance="5070"/> glooth bag -->
+		<item name="glooth blade" chance="1000"/><!-- glooth blade -->
+		<item name="glooth cape" chance="580"/><!-- glooth cape -->
+		<!-- <item id="24183" countmax="1" chance="3010"/> glooth capsule -->
+		<item name="glooth club" chance="1000"/><!-- glooth club -->
+		<!-- <item id="23514" countmax="1" chance="2470"/> glooth sandwich -->
+		<!-- <item id="23529" countmax="1" chance="1010"/> glooth spear -->
+		<!-- <item id="23517" countmax="1" chance="2600"/> glooth steak -->
+		<item name="gold coin" countmax="100" chance="100000"/><!-- gold coin -->
+		<item name="great health potion" countmax="1" chance="8090"/><!-- great health potion -->
+		<item name="great mana potion" countmax="2" chance="7400"/><!-- great mana potion -->
+		<item name="great spirit potion" countmax="1" chance="3480"/><!-- great spirit potion -->
+		<item name="green gem" chance="160"/><!-- green gem -->
+		<item name="platinum coin" countmax="3" chance="60050"/><!-- platinum coin -->
+		<item name="rubber cap" chance="730"/><!-- rubber cap -->
+		<item name="skull staff" chance="420"/><!-- skull staff -->
+		<item name="small emerald" countmax="2" chance="2040"/><!-- small emerald -->
+		<item name="small topaz" countmax="2" chance="2530"/><!-- small topaz -->
+		<!-- <item id="24185" countmax="1" chance="8010"/> tainted glooth capsule -->
+		<item name="terra boots" chance="490"/><!-- terra boots -->
+		<item name="terra hood" chance="600"/><!-- terra hood -->
+		<item name="terra legs" chance="480"/><!-- terra legs -->
+		<item name="terra mantle" chance="600"/><!-- terra mantle -->
+		<item name="ultimate health potion" countmax="1" chance="3440"/><!-- ultimate health potion -->
+		<item name="war axe" chance="100"/><!-- war axe -->
+	</loot>
+</monster>

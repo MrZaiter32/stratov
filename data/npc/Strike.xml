@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<npc name="Strike" script="data/npc/scripts/itensvip.lua" access="5" lookdir="2" walkinterval="0">
+  <health now="200" max="200" />
+   <look type="324" head="95" body="95" legs="95" feet="95" addons="3" />
+  <parameters>
+    <parameter key="message_greet" value="Ola |PLAYERNAME|. Veio trocar uns vips coins por itens? Diga {vips}." />
+  </parameters>
+</npc>

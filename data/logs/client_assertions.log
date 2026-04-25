@@ -1,0 +1,84 @@
+----- 7/9/2022 14:59:54 - Arcangel (38.124.200.36) -----
+Debug Assertion 8.60 Communication.cpp 1520
+Tue Sep 06 14:45:01 2022
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Business Edition 64 Bit in ESP
+Processor: AMD E-300 APU
+Video Card: TARJETA G
+Last Packet Types: 100 010 180 031 100 020 010 010 010 180
+Last Packet: 180 019 032 000 083 112 101 099 116 097 116 111 114 032 091 057
+Player Name: Alicein Wonderland (28)
+Player Action: 049 057 056 046 050 055 046 049 048 051 046 050 051 055 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 100) (MainWindow = 41927520), reason:
+Communication.cpp 1681: exception occurred (PlayerX = 376) (PlayerY = 254), reason:
+Communication.cpp 1659: exception occurred (xmin = 0) (ymin = 0), reason:
+Communication.cpp 1638: exception occurred (Type = 97) (OldType = 2889), reason:
+Communication.cpp 1592: exception occurred (Type = 97) (CreatureID = 1073743790), reason:
+Communication.cpp 1520: outfit has not all four directions (Creature->OutfitType = 177) (GetOutfitPatternWidth(Creature->OutfitType) = 1)
+
+
+----- 3/10/2022 11:24:42 - Elchangon (201.170.142.65) -----
+Debug Assertion 8.60 Container.h 226
+Sun Oct 02 09:14:13 2022
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in ESP
+Processor: Intel CORE I3-1
+Video Card: Intel (R) UHD G
+Last Packet Types: 160 160 160 160 160 160 160 120 160 162
+Last Packet: 010 230 191 000 016 050 000 000 100 113 003 174 003 007 248 017
+Player Position: [881,942,7]
+Player Name: Duglask (Olympa-Online)
+Player Action: 055 052 046 057 049 046 049 050 051 046 050 050 056 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+MainFrm.cpp 508: exception occurred (nIDEvent = 1), reason:
+Control.cpp 1437: exception occurred, reason:
+Map.cpp 1008: exception occurred (i = 0), reason:
+Objects.cpp 757: exception occurred (Number = 109), reason:
+Container.h 226: index out of range (original i: 109, i: 108, min: 1, d: 70)
+Comment: 
+
+----- 16/10/2022 19:5:20 - Elitox (190.142.132.170) -----
+Debug Assertion 8.60 Objects.cpp 277
+Sat Oct 15 21:01:36 2022
+Graphic Engine: DirectX5 (0)
+Operating System: Windows 7 Business Edition 64 Bit in ESP
+Processor: Intel Atom N455 @ 1.
+Video Card: Intel (R) GRAPH
+Last Packet Types: 120 131 100 010 031 100 020 010 010 010
+Last Packet: 010 250 001 000 016 050 000 000 100 232 003 231 003 006 102 003
+Player Position: [1000,999,6]
+Player Name: Elitox (Loney)
+Player Action: 049 053 056 046 054 057 046 049 046 050 048 050 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 120) (MainWindow = 3833688), reason:
+Communication.cpp 2257: exception occurred (Position = 1) (Type = 12235), reason:
+Objects.cpp 280: exception occurred (Type = 12235) (Flag = 10), reason:
+Objects.cpp 277: assertion failed (Type = 12235) (ObjectProperties->high() = 11703), reason:
+In(Type,ObjectProperties->low(),ObjectProperties->high())
+
+
+----- 28/10/2022 17:58:1 - Kitsuned (186.78.125.49) -----
+Debug Assertion 8.60 Objects.cpp 277
+Thu Oct 27 19:55:50 2022
+Graphic Engine: DirectX9 (2)
+Operating System: Windows Vista Family in ESP
+Processor: Intel Core i5 -6300HQ @
+Video Card: Intel (R) HD GR
+Last Packet Types: 100 010 031 100 020 000 000 000 000 000
+Last Packet: 010 073 180 005 016 050 000 000 100 232 003 232 003 007 129 038
+Player Name: Kitsuned (Olympa-Online)
+Player Action: 055 052 046 057 049 046 049 050 051 046 050 050 056 058 055 049 055 050
+Player.cpp 361: exception occurred, reason:
+Network.cpp 946: exception occurred (ErrorCode = 0), reason:
+Control.cpp 1331: exception occurred (Type = 100) (MainWindow = 41530720), reason:
+Communication.cpp 1681: exception occurred (PlayerX = 1000) (PlayerY = 1000), reason:
+Communication.cpp 1659: exception occurred (xmin = 0) (ymin = 0), reason:
+Communication.cpp 1638: exception occurred (Type = 11835) (OldType = 0), reason:
+Objects.cpp 280: exception occurred (Type = 11835) (Flag = 10), reason:
+Objects.cpp 277: assertion failed (Type = 11835) (ObjectProperties->high() = 11703), reason:
+In(Type,ObjectProperties->low(),ObjectProperties->high())
+
+

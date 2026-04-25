@@ -1,0 +1,5 @@
+<raid>
+<announce delay="0" type="event" message="Las leyendas cuentan muy poco , solo dicen que con su aliento podria dejar frio a cualqiera zZzZz ..." />
+<announce delay="2000" message="La Temperatura Delas Montañas Reportan -52c" />
+<singlespawn delay="2000" name="articuno" x="858" y="590" z="8" />
+</raid>

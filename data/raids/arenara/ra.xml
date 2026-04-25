@@ -1,0 +1,14 @@
+<raid>
+<announce delay="0" type="event" message="Demons of breaking into colisseum of Anshara."/>
+<announce delay="900000" type="event" message="Ra (Summoned) of breaking into colliseum of Anshara."/>
+<!--Area Spawns-->
+<areaspawn delay="30000" fromx="722" fromy="363" fromz="13" tox="749" toy="393" toz="13">
+	<monster name="Demon" amount="30" />
+</areaspawn>
+<areaspawn delay="60000" fromx="722" fromy="363" fromz="13" tox="749" toy="393" toz="13">
+	<monster name="Demon" amount="40" />
+</areaspawn>
+<areaspawn delay="90000" fromx="727" fromy="368" fromz="14" tox="743" toy="386" toz="14">
+	<monster name="Ra" amount="1" />
+</areaspawn>
+</raid>
